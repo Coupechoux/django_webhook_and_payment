@@ -1,0 +1,1 @@
+web: gunicorn quick_site.wsgi

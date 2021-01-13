@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ma bibliothèque</title>
+</head>
+<body>
+
+<h2>Tous les livres de la bibliothèque</h2>
+<table>
+	<tr><th>Titre</th><th>Auteur</th><th>Localisation</th></tr>
+	{% for book in books %}<tr><td>{{ book.title }}</td><td>{{ book.author.name }}</td><td>Rangée {{ book.shelf.row }}, colonne {{ book.shelf.column }}</td></tr>{% endfor %}
+</table>
+
+</body>
+</html> 
