@@ -123,8 +123,12 @@ STATIC_URL = '/static/'
 
 WEBHOOK_CONTACT = 'https://discord.com/api/webhooks/799254564087005224/soRw8jyFHZDFOSBztlXn_CQd8J05r9-B-Yo_oX0Nc0t9Vm66QA5nsVN36wRlw8MMIwu-'
 
-STRIPE_SECRET_API_KEY = 'sk_test_51I8a9hAyG7d5yMdeX2ur0fDUSUbDMadCyklOG9lKvC1q1ztpY2KmsgHnuKuLSLyLjqIWFMx3ZqFzI75SFLusNtRL00WG2NMZnC'
-STRIPE_PUBLIC_API_KEY = 'pk_test_51I8a9hAyG7d5yMdeRXKgTWhStqNpIoVjFUTJ71QB74Emxhlrx1LdjvJQtPXPNDSmBARAoqMm0chcimw0hApM47Hc002Pf9zPrh'
+# Les différentes clés STRIPE, à créer/récupérer sur le dashboard stripe
+
+STRIPE_SECRET_API_KEY = 'sk_test_...'
+STRIPE_PUBLIC_API_KEY = 'pk_test_...'
+# STRIPE_ENDPOINT_SECRET = '...'
+
 
 # Configure Django App for Heroku.
 import django_heroku
