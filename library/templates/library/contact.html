@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ma bibliothèque</title>
+</head>
+<body>
+
+<h2>Contacter le responsable</h2>
+
+<form action="{% url 'contact' %}" method="post">
+{% csrf_token %}
+<ul>
+{{ data.as_ul }}
+</ul>
+<input type="submit" value="Envoyer"/>
+</form>
+
+</body>
+</html> 

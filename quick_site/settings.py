@@ -23,14 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'q-0l0pra=62cldt5n#q)q*xz-mx)*a&5#r=&kf_#mg%p)xgy7o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1:8000']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+	'payment.apps.PaymentConfig',
 	'library.apps.LibraryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,6 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+WEBHOOK_CONTACT = 'https://discord.com/api/webhooks/799254564087005224/soRw8jyFHZDFOSBztlXn_CQd8J05r9-B-Yo_oX0Nc0t9Vm66QA5nsVN36wRlw8MMIwu-'
+
+STRIPE_SECRET_API_KEY = 'sk_test_51I8a9hAyG7d5yMdeX2ur0fDUSUbDMadCyklOG9lKvC1q1ztpY2KmsgHnuKuLSLyLjqIWFMx3ZqFzI75SFLusNtRL00WG2NMZnC'
+STRIPE_PUBLIC_API_KEY = 'pk_test_51I8a9hAyG7d5yMdeRXKgTWhStqNpIoVjFUTJ71QB74Emxhlrx1LdjvJQtPXPNDSmBARAoqMm0chcimw0hApM47Hc002Pf9zPrh'
 
 # Configure Django App for Heroku.
 import django_heroku

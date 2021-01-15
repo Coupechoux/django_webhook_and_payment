@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<button onclick="communicationExample()">20€</button>
+<div id="contenu">Défaut</div>
+<script>
+	function communicationExample() {
+		fetch("{% url 'checkout' %}")
+			.then(response => response.json())
+			.then(data => {
+				let element = document.getElementById("contenu");
+				
+				const stripe = Stripe("{{ STRIPE_PUBLIC_KEY }}");
+				stripe.redirectToCheckout({sessionId:data['session_id']})
+			});
+	}
+</script>
+</body>
+</html>
